@@ -1,0 +1,344 @@
+/*
+Copyright 2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. 
+
+A copy of the License is located at http://aws.amazon.com/apache2.0/
+
+or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+
+See the License for the specific language governing permissions and limitations under the License.
+*/
+
+body {
+  background-color: rgba(100, 65, 164, 1.0);
+  color: #fff;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 0 2em 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+/* Header styles */
+header {
+  position: relative;
+  padding: 1.5em 1em;
+}
+
+header .logo, header h1 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header .logo {
+  position: relative;
+  width: 20%;
+  max-width: 250px;
+  margin-right: 2em;
+}
+
+header .logo img {
+  width: 100%;
+}
+
+
+/* Video styles */
+
+.video__wrapper {
+  display: block;
+  background-color: rgba(255,255,255,0.1);
+  padding: 1em;
+  margin: 1em auto;
+}
+
+.video__container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+.video__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Button styles */
+
+.btn-container {
+  display: block;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.btn {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .2s;
+}
+.btn-login {
+  width: auto;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #6441A4;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 1em 3em;
+  border-radius: 2em;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.btn-login:hover, .btn-login:active, .btn-login:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-login span, .btn-login .icon {
+  display: inline;
+  vertical-align: bottom;
+}
+
+.btn-login .icon {
+  width: auto;
+  height: 2em;
+  margin-left: 1em;
+}
+
+/* Button hover/click effects */
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px 0 0 -35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-login::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -35px 0 0 -35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-login::before,
+.btn-login::after {
+  box-shadow: 0 0 0 2px rgba(104, 88, 166, 0.3);
+}
+
+.btn-login:hover::before,
+.btn-login:focus::before {
+  -webkit-animation: anim-effect-ivana-1 0.5s forwards;
+  animation: anim-effect-ivana-1 0.5s forwards;
+}
+
+.btn-login:hover::after,
+.btn-login:focus::after {
+  -webkit-animation: anim-effect-ivana-2 0.5s forwards;
+  animation: anim-effect-ivana-2 0.5s forwards;
+}
+
+@-webkit-keyframes anim-effect-ivana-1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes anim-effect-ivana-1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@-webkit-keyframes anim-effect-ivana-2 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  50%, 100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
+  }
+}
+
+@keyframes anim-effect-ivana-2 {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  50%, 100% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
+  }
+}
+
+
+
+/* Media Queries */
+
+@media screen and (min-width: 1300px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+
+
+
+html {
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+         }
+        
+         nav {
+            width: 100%;
+            background-color: #232127;
+            height: 64px;
+            margin-bottom: 20px;
+         }
+         iframe {
+            border: none;
+         }
+         .container {
+            /*display: block;*/
+            width: 1024px;
+            margin: 0 auto;
+         }
+         .header img {
+            height: 128px;
+            width: auto;
+            vertical-align: middle;
+            background-color: #FFF;
+            border-radius: 50%;
+            margin: 10px;
+            box-shadow: 5px 5px 5px #232127;
+         }
+         .header {
+            color: #FFF;
+            font-weight: 600;
+            background-image: linear-gradient(to bottom, #6441a4, #17141f);
+         }
+         .header span {
+            vertical-align: middle;
+            font-size: 4rem;
+            text-shadow: -1px -1px 2px rgba(0,0,0,0.3);
+         }
+         .twitch-connect {
+            border: 1px solid #6140a1; 
+            border-radius: 3px;
+            font-size: 16px;
+            padding: 10px 10px 10px 10px;
+            text-decoration: none; 
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+            font-weight: 600;
+            color: #FFFFFF;
+            background-color: #6441a4;
+            background-image: linear-gradient(to bottom, #6441a4, #4b367c);
+            vertical-align: middle;
+            float: right;
+            margin: 10px;
+         }
+         .twitch-connect img {
+            vertical-align: middle;
+            height: 16px;
+            margin-right: 10px;
+         }
+         .twitch-connect span {
+            vertical-align: middle;
+         }
+         .twitch-connect:hover {
+            border: 1px solid #4d3380;
+            background-color: #a892d4;
+            background-image: linear-gradient(to bottom, #a892d4, #6341a5);
+         }
+         #twitch-image-container img{
+          float: left;
+         }
+         .twitch-button {
+   font-size: 1rem;
+   color: #FFF;
+   cursor: pointer;
+   vertical-align: middle;
+   font-weight: 400;
+   text-decoration: none;
+   padding: .7rem;
+   border: none;
+   min-width: 10rem;
+}
+.twitch-button.connect {
+   background-color: hsl(261, 43%, 45%);
+   float: right;
+}
+.twitch-button .glitch {
+   vertical-align: middle;
+   height: 2rem;
+   margin-right: .7rem;
+   fill: #FFF;
+}
+.twitch-button span {
+   vertical-align: middle;
+}
+.twitch-button.connect:hover {
+   background-color: hsl(261, 43%, 55%)
+}
+.twitch-button.disconnect {
+   background-color: hsl(0, 97%, 60%);
+   float: right;
+}
+.twitch-button.disconnect:hover {
+   background-color: hsl(0, 97%, 70%);
+}
