@@ -13,7 +13,7 @@ or in the "license" file accompanying this file. This file is distributed on an 
 
 require 'twitch.php';
 
-$channel = '<YOUR CHANNEL HERE>'; // Channel to redirect user to after VHS link is completed. 
+$channel = '<duendeconker001>'; // Channel to redirect user to after VHS link is completed. 
 
 $provider = new TwitchProvider([
     'clientId'      => '<YOUR CLIENT ID HERE>',               // The client ID assigned when you created your application
